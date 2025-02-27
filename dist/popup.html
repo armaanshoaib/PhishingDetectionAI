@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Phishing Detector</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+    .status {
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    .safe {
+      background-color: #e6ffe6;
+      color: #006600;
+      border: 1px solid #b3ffb3;
+    }
+    .suspicious {
+      background-color: #fff3e6;
+      color: #cc6600;
+      border: 1px solid #ffd9b3;
+    }
+    .dangerous {
+      background-color: #ffe6e6;
+      color: #cc0000;
+      border: 1px solid #ffb3b3;
+    }
+    #details {
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    h3 {
+      margin-top: 0;
+      color: #444;
+      font-size: 16px;
+    }
+    strong {
+      color: #1a1a1a;
+    }
+    br {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Email Phishing Detector</h2>
+  <div id="status" class="status">Analyzing...</div>
+  <div id="details"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

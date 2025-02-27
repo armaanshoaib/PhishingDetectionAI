@@ -31,7 +31,7 @@ function formatAnalysis(text) {
   
   // Bold important terms
   const termsToHighlight = [
-    'DANGEROUS', 'SAFE',
+    'DANGEROUS', 'SUSPICIOUS', 'SAFE',
     'Generic Greeting', 'Urgency', 'Threat',
     'Suspicious Links', 'Poor Grammar',
     'WARNING', 'ALERT', 'CRITICAL'
@@ -51,7 +51,7 @@ function formatAnalysis(text) {
 // Function to analyze email using OpenAI API
 async function analyzeEmail(emailContent) {
   // // main API key
-  const OPENAI_API_KEY = '';
+  const OPENAI_API_KEY = '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';
   
   try {
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -61,7 +61,7 @@ async function analyzeEmail(emailContent) {
         'Authorization': `Bearer ${OPENAI_API_KEY}`
       },
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: "gpt-3.5-turbo",
         messages: [{
           role: "system",
           content: "You are a cybersecurity expert analyzing emails for phishing attempts. Provide a classification (SAFE or DANGEROUS) and explanation. Format your response with numbered points and clear sections. Most of them that I provide will generally be safe from Google, Amazon, YouTube, Kotak Banks etc. So please try to be generous and be less strict. "
