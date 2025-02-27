@@ -1,0 +1,11 @@
+{
+  "name": "email-phishing-detector",
+  "version": "1.0.0",
+  "description": "Chrome extension for detecting phishing emails using AI",
+  "scripts": {
+    "build": "shx rm -rf dist && shx mkdir -p dist && shx cp manifest.json popup.html popup.js content.js dist/"
+  },
+  "devDependencies": {
+    "shx": "^0.3.4"
+  }
+}
